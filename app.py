@@ -13,11 +13,11 @@ def main():
         clear_btn = st.button("Clear", key="_clear")
         
         max_tokens = st.slider("Max Tokens", 1, 32768, 1024, 1, key="mtokens")
-        temperature = st.slider("Temperature", 0, 2, 0.6, 0.01, key="temp")
-        top_p = st.slider("Top_P", 0.01, 1, 1, 0.01, key="topp")
+        temperature = st.slider("Temperature", 0.00, 2.00, 0.60, 0.01, key="temp")
+        top_p = st.slider("Top_P", 0.01, 1.00, 1.00, 0.01, key="topp")
         top_k = st.slider("Top_K", 1, 100, 50, 1, key="topk")
-        f_penalty=st.slider("Frequency Penalty", -2, 2, 0, 0.01, key="freq")
-        p_penalty = st.slider("Presence Penalty", -2, 2, 0, 0.01, key="pres")
+        f_penalty=st.slider("Frequency Penalty", -2.00, 2.00, 0.00, 0.01, key="freq")
+        p_penalty = st.slider("Presence Penalty", -2.00, 2.00, 0.00, 0.01, key="pres")
         
     prompt = st.text_input("Prompt", key="_prompt")
     suffix = st.text_input("Suffix", key="_suffix")
