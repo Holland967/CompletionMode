@@ -70,7 +70,7 @@ def main():
         except Exception as e:
             st.error(str(e))
         st.rerun()
-    elif not prompt and submit and (suffix or not suffix):
+    elif not prompt and submit_btn and (suffix or not suffix):
         st.warning("No prompt!")
 
 if __name__ == "__main__":
