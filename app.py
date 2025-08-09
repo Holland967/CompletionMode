@@ -18,8 +18,8 @@ def main():
         f_penalty=st.slider("Frequency Penalty", -2.00, 2.00, 0.00, 0.01, key="freq")
         p_penalty = st.slider("Presence Penalty", -2.00, 2.00, 0.00, 0.01, key="pres")
         
-    prompt = st.text_input("Prompt", key="_prompt")
-    suffix = st.text_input("Suffix", key="_suffix")
+    prompt = st.text_area("Prompt", key="_prompt")
+    suffix = st.text_area("Suffix", key="_suffix")
     submit_btn = st.button("Submit", key="_submit")
     
     if api_key and base_url:
